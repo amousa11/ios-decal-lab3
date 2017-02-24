@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:00.23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axb-3T-VKu">
+                                <rect key="frame" x="0.0" y="164" width="375" height="125"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="63"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odb-dy-y8S">
+                                <rect key="frame" x="39" y="474" width="100" height="100"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4cL-jT-vvD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-YU-mKS">
+                                <rect key="frame" x="238" y="474" width="100" height="100"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sJv-Yk-H0j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="axb-3T-VKu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="0GZ-dw-h8u"/>
+                            <constraint firstItem="gSI-YU-mKS" firstAttribute="leading" secondItem="Odb-dy-y8S" secondAttribute="trailing" constant="8" symbolic="YES" id="17v-DC-Y5u"/>
+                            <constraint firstItem="Odb-dy-y8S" firstAttribute="width" secondItem="gSI-YU-mKS" secondAttribute="width" id="8Zb-EV-i8x"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Odb-dy-y8S" secondAttribute="leading" id="FYq-xB-X4T"/>
+                            <constraint firstItem="axb-3T-VKu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="144" id="SfA-Lf-TA7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gSI-YU-mKS" secondAttribute="bottom" constant="93" id="W5Y-If-KJB"/>
+                            <constraint firstItem="Odb-dy-y8S" firstAttribute="height" secondItem="gSI-YU-mKS" secondAttribute="height" id="Zx1-jP-sF8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="axb-3T-VKu" secondAttribute="trailing" constant="-16" id="cWu-19-xxy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Odb-dy-y8S" secondAttribute="bottom" constant="93" id="heV-cm-YSd"/>
+                            <constraint firstItem="axb-3T-VKu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nzK-bz-HqK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="axb-3T-VKu" secondAttribute="bottom" constant="378" id="qSI-ec-tWl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gSI-YU-mKS" secondAttribute="trailing" id="sA2-C6-MKg"/>
+                            <constraint firstItem="axb-3T-VKu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yrg-pm-GI7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="axb-3T-VKu" id="B85-ZI-E1p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

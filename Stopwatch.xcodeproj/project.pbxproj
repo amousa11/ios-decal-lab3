@@ -13,6 +13,7 @@
 		0B0290361E569AF400A5FE29 /* Stopwatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B0290341E569AF400A5FE29 /* Stopwatch.xcdatamodeld */; };
 		0B0290381E569AF400A5FE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0290371E569AF400A5FE29 /* Assets.xcassets */; };
 		0B02903B1E569AF400A5FE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0290391E569AF400A5FE29 /* LaunchScreen.storyboard */; };
+		0B0290431E569EDB00A5FE29 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0290421E569EDB00A5FE29 /* Stopwatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0B0290371E569AF400A5FE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B02903A1E569AF400A5FE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B02903C1E569AF400A5FE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B0290421E569EDB00A5FE29 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0B02902D1E569AF400A5FE29 /* AppDelegate.swift */,
 				0B02902F1E569AF400A5FE29 /* ViewController.swift */,
 				0B0290311E569AF400A5FE29 /* Main.storyboard */,
+				0B0290421E569EDB00A5FE29 /* Stopwatch.swift */,
 				0B0290371E569AF400A5FE29 /* Assets.xcassets */,
 				0B0290391E569AF400A5FE29 /* LaunchScreen.storyboard */,
 				0B02903C1E569AF400A5FE29 /* Info.plist */,
@@ -143,6 +146,7 @@
 				0B0290301E569AF400A5FE29 /* ViewController.swift in Sources */,
 				0B0290361E569AF400A5FE29 /* Stopwatch.xcdatamodeld in Sources */,
 				0B02902E1E569AF400A5FE29 /* AppDelegate.swift in Sources */,
+				0B0290431E569EDB00A5FE29 /* Stopwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
